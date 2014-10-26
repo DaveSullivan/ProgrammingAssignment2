@@ -33,7 +33,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## The parameter x is expected to be the special list returned by makeCacheMatrix
 
 cacheSolve <- function(x, ...) {
-  cacheSolve <- function(x) {
     inv = x$getinv()
     if (!is.null(inv)) {
       message("getting cached data")
@@ -44,5 +43,4 @@ cacheSolve <- function(x, ...) {
     inv <- solve(m)
     x$setinv(inv)
     inv  
-  }
 }
